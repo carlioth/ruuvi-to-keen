@@ -1,4 +1,4 @@
-const Keen = require('keen-js');
+const Keen = require('keen-tracking');
 const ruuvi = require('node-ruuvitag');
 const env = require('node-env-file');
 
@@ -12,7 +12,6 @@ const keenClient = new Keen({
 ruuvi.on('found', tag => {
   console.log(tag.id + ' found');
   tag.on('updated', data => {
-    console.log(tag.id + ' data received: ' + JSON.stringify(data, null, ''));
     keenClient.recordEvent(
       'measurement',
       {
