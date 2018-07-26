@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/okko/ruuvi-to-keen",
   "dependencies": {
-    "keen-js": "^4.0.0",
+    "keen-tracking": "^3.0.2",
     "noble": "^1.8.1",
     "node-env-file": "^0.1.8",
     "node-ruuvitag": "^3.2.0"
